@@ -60,6 +60,16 @@ int main() {
         std::cout << num << " ";  // Output: 2 4 6 8 10
     }
     std::cout<<std::endl;
+
+    //elements not modified
+    for (int num: arr)
+    {
+        num*=2;
+    }
+    for (int num : arr) {
+        std::cout << num << " ";  // Output: 2 4 6 8 10
+    }
+    std::cout<<std::endl;
     //Range-Based For Loops
     return 0;
 }
