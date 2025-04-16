@@ -7,7 +7,7 @@ int main()
     std::vector<Book> library;
 
     // Create some Book objects using parameterized constructor.
-    double ratings1[] = {4.5, 4.0, 5.0};
+    double ratings1[] = {4.5, 4.0, 5.0};//static array, located on stack, quick access, short length
     Book book1("The C++ Programming Language", "Bjarne Stroustrup", 1376, 59.99, ratings1, 3);
 
     double ratings2[] = {4.2, 3.9};
