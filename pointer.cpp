@@ -16,7 +16,7 @@ int main()
 
 
 
-    // Allocate memory for 10 double
+    // Allocate memory for 10 double on heap
     int length=10;
     double* arr = new double[length];
     // Initialize array values

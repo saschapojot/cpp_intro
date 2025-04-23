@@ -1,8 +1,9 @@
 #include <iostream>
 //Pass by Reference
-void increment(int& num1, int &num2) {
+void increment(int& num1, int &num2, int num3) {
     num1++;  // Directly modifies the original
     num2+=4;
+    num3++;
 }
 //Pass by Const Reference (Read Only)
 void printLargeString(const std::string& str) {
@@ -19,24 +20,26 @@ int main() {
 
     // Create a reference (alias) to 'original'
     int& ref = original;
-
+    int cpy_original=original;
     std::cout << "Original: " << original << "\n";  // 42
     std::cout << "Reference: " << ref << "\n";      // 42
-
+    std::cout << "cpy_original: " << cpy_original << "\n";      // 42
     // Modify through reference
     ref = 100;
-
+    cpy_original=39;
     std::cout << "After modification:\n";
     std::cout << "Original: " << original << "\n";  // 100
     std::cout << "Reference: " << ref << "\n";      // 100
+    std::cout << "cpy_original: " << cpy_original << "\n";
 
 
     // pass by reference
     int val1=5;
     int val2=6;
-    std::cout<<"before increment, val1="<<val1<<", val2="<<val2<<std::endl;
-    increment(val1,val2);
-    std::cout<<"after increment, val1="<<val1<<", val2="<<val2<<std::endl;
+    int val3=10;
+    std::cout<<"before increment, val1="<<val1<<", val2="<<val2<<", val3="<<val3<<std::endl;
+    increment(val1,val2,val3);
+    std::cout<<"after increment, val1="<<val1<<", val2="<<val2<<", val3="<<val3<<std::endl;
 
     //const reference
     std::string text = "Very long string...";
