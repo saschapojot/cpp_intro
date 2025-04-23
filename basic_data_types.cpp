@@ -1,6 +1,7 @@
 #include <iostream>//similar to import xxx in python
 
 //main is entry point of an executable
+
 int main() {
     // Integer types
     int age = 25;

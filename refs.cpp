@@ -9,6 +9,7 @@ void increment(int& num1, int &num2, int num3) {
 void printLargeString(const std::string& str) {
     // str cannot be modified here
     std::cout << str << "\n";
+
 }
 
 // Return reference to array element
@@ -31,7 +32,7 @@ int main() {
     std::cout << "Original: " << original << "\n";  // 100
     std::cout << "Reference: " << ref << "\n";      // 100
     std::cout << "cpy_original: " << cpy_original << "\n";
-
+    std::cout << "Original: " << original << "\n";
 
     // pass by reference
     int val1=5;
